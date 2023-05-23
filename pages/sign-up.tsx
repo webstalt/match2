@@ -16,13 +16,13 @@ export const SignUp = ({navigation}: any) => {
         placeholderTextColor={Colors.GRAY}
         placeholder="Имя"
         maxLength={40}
-        style={{padding: 10}}
+        style={styles.input}
       />
       <TextInput
         placeholderTextColor={Colors.GRAY}
         placeholder="Описание"
         maxLength={200}
-        style={{padding: 10}}
+        style={styles.input}
         multiline
         numberOfLines={3}
       />
@@ -37,7 +37,7 @@ export const SignUp = ({navigation}: any) => {
         onPress={() => {
           navigation.navigate('Choice');
         }}>
-        <View style={styles.vpoisk}>
+        <View style={styles.toSearch}>
           <Text>В поиск</Text>
         </View>
       </Pressable>
@@ -51,8 +51,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  input: {},
-  vpoisk: {
+  input: {
+    padding: 16,
+    border: '1px',
+    borderColor: Colors.PEACH,
+  },
+  toSearch: {
     padding: 30,
     color: 'blue',
   },

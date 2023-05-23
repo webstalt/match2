@@ -37,7 +37,11 @@ function App(): JSX.Element {
     <PaperProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName={Screens.SignUp}>
-          <Stack.Screen name={Screens.SignUp} component={SignUp} />
+          <Stack.Screen
+            name={Screens.SignUp}
+            component={SignUp}
+            options={{title: 'Регистрация'}}
+          />
 
           <Stack.Screen
             name={Screens.Choice}
